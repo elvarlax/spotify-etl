@@ -69,8 +69,6 @@ def spotify_data_extract(myTimer: func.TimerRequest) -> None:
     connection="STORAGE_CONNECTION_STRING"
 )
 def spotify_data_transformation_load(myblob: func.InputStream):
-    spotify_data = process_blobs(storage_connection_string, storage_container)
-    album_df, artist_df, song_df = transform_data(spotify_data)
     """Transforms and loads Spotify data stored in Azure Data Lake Storage Gen2.
 
     Args:
@@ -79,6 +77,8 @@ def spotify_data_transformation_load(myblob: func.InputStream):
     Returns:
         None
     """
+    spotify_data = process_blobs(storage_connection_string, storage_container)
+    album_df, artist_df, song_df = transform_data(spotify_data)
 
     # Initialize ADLS Gen2 client and get file system client
     account_url = f"https://{storage_account_name}.dfs.core.windows.net"

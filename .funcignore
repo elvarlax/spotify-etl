@@ -1,0 +1,6 @@
+__pycache__/
+.venv
+.vscode
+local.settings.json
+__azurite_db_queue__.json
+__azurite_db_table__.json

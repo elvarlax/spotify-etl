@@ -4,7 +4,13 @@
 In this project, we will build an end-to-end ETL (Extract, Transform, Load) pipeline using the Spotify API on Azure and Snowflake. The pipeline will retrieve data from the Spotify API, transform it to a desired format, and load it into Azure Data Lake Storage Gen2. From there, we will use Snowflake for further processing and analysis of the transformed data. Snowflake's cloud-based data warehousing platform provides scalable and efficient analytics capabilities, allowing us to derive valuable insights from the Spotify data. This project aims to demonstrate the integration of Azure services with Snowflake for building robust data pipelines and performing advanced analytics on music-related data.
 
 ### Architecture
-![Architecture Diagram](https://github.com/elvarlax/spotify-etl/blob/main/spotify_data_pipeline.jpg)
+![Architecture Diagram](https://github.com/elvarlax/spotify-etl/blob/main/data_pipeline.jpg)
+
+## Entity-Relationship (ER) Model
+![Data Model](https://github.com/elvarlax/spotify-etl/blob/main/er_model.jpg)
+
+## Dimensional Model
+![Dimensional Model](https://github.com/elvarlax/spotify-etl/blob/main/dimensional_model.jpg)
 
 ### About Dataset/API
 The Spotify API offers access to extensive music data, including artist details, album information, and song attributes. It's a valuable resource for developers creating music-related applications and services. - [Spotify API](https://developer.spotify.com/documentation/web-api)

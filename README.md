@@ -1,7 +1,7 @@
 # Spotify End-To-End Data Pipeline Project
 
 ### Introduction
-In this project, we will build ETL (Extract, Transform, Load) pipeline using the Spotify API on Azure. The pipeline will retrieve data from the Spotify API, transform it to a desired format, and load it to an Azure data lake storage.
+In this project, we will build an end-to-end ETL (Extract, Transform, Load) pipeline using the Spotify API on Azure and Snowflake. The pipeline will retrieve data from the Spotify API, transform it to a desired format, and load it into Azure Data Lake Storage Gen2. From there, we will use Snowflake for further processing and analysis of the transformed data. Snowflake's cloud-based data warehousing platform provides scalable and efficient analytics capabilities, allowing us to derive valuable insights from the Spotify data. This project aims to demonstrate the integration of Azure services with Snowflake for building robust data pipelines and performing advanced analytics on music-related data.
 
 ### Architecture
 ![Architecture Diagram](https://github.com/elvarlax/spotify-etl/blob/main/spotify_data_pipeline.jpg)
@@ -14,7 +14,7 @@ The Spotify API offers access to extensive music data, including artist details,
 
 2. **Azure Functions**: Azure Functions, a service by Microsoft Azure, enables developers to deploy event-driven applications seamlessly. With it, you write small, trigger-based functions in various languages like C#, JavaScript, Python, or TypeScript. These functions respond to HTTP requests, timers, storage events, and more. Azure Functions automatically scales with demand, reducing operational overhead and fostering innovation by abstracting infrastructure management.
 
-3. **Azure Synapse Analytics**: Azure Synapse Analytics, a Microsoft Azure service, merges data warehousing, big data analytics, and integration into one platform. It enables real-time analysis and visualization of large volumes of structured and unstructured data from diverse sources. With on-demand resources, seamless integration with Azure Machine Learning and Power BI, and tight coupling with Azure Data Lake Storage and Azure Databricks, Synapse Analytics empowers organizations to extract valuable insights and make data-driven decisions efficiently.
+3. **Snowflake**: Snowflake is a cloud-based data warehousing platform designed for the cloud. It offers a fully managed service that allows you to store and analyze your data using SQL. With its unique architecture, Snowflake separates storage and compute, enabling you to scale resources independently based on your needs. Snowflake supports diverse workloads, including data warehousing, data lakes, and real-time analytics, making it a versatile solution for modern data analytics needs. Within Snowflake, you can leverage services like Snowpipe for data ingestion, warehouses for query processing, and Snowflake's native SQL for analytics.
 
 4. **Power BI:** Power BI is a Microsoft business analytics service that helps users visualize data, create interactive reports and dashboards, and share insights. It connects to various data sources, offers intuitive visualization tools, and supports advanced analytics like predictive modeling. With collaboration features and cloud-based accessibility, Power BI enables users to make data-driven decisions easily.
 
@@ -40,4 +40,6 @@ pip install pandas
 
 6. **Transform and Load Code:** Automatically transform and load raw data to Azure Data Lake Storage Gen2.
 
-7. **Query Using Synapse Analytics:** Analyze transformed data with Azure Synapse Analytics.
+7. **Load Transformed Data to Snowflake with Snowpipe:** Automatically load transformed data to Snowflake with Snowpipe.
+
+8. **Query Using Snowflake:** Analyze dimensions and facts data with Snowflake.
